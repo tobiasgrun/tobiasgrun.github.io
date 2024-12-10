@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="keywords" content="tbgrun, tobias b. grun, data science, data analytics, data engineering, statistics">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLP Sentiment Analysis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="assets/images/icon.ico" alt="icon" type="image/x-icon"/>
+</head>
+
+<body>
+<div class="profile-container">
+   <aside class="profile-aside">
+       <img src="assets/images/sites/nlp_sentiment_analysis/wordcloud.png" alt="NLP Sentiment Analysis" class="profile-image" id="profile"> 
+   </aside>
+  <section>
+     <h1 id="overview">NLP Sentiment Analysis of Yelp Reviews</h1>
+     <p>This project focuses on applying Natural Language Processing (NLP) techniques to perform sentiment analysis on customer reviews from the Yelp Open Dataset. 
+        The goal is to classify individual reviews as positive, neutral, or negative based on customer sentiment, and then aggregate these sentiments at the 
+        business or store level. By analyzing sentiment trends, the project aims to identify key areas for improvement and predict potential impacts on sales and 
+        customer satisfaction.</p>
+  </section>
+</div>
+    
+<nav class="navbar">
+    <ul class="nav-links">
+        <li><a href="https://tbgrun.github.io#projects">Back to Portfolio</a></li>
+	      <li><a href="#profile">Overview</a></li>
+	      <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#scenario">Scenario</a></li>
+	      <li><a href="#data">Data</a></li>
+      	<li><a href="#data_analysis">Data Analysis</a></li>
+      	<li><a href="#results">Results</a>
+    </ul>
+</nav>  
+
+<div class="container">
+<hr class="solid">
+    <article>
+        <p>You have likely figured it out — this site is in the making. Please check back regularly to watch as I build it bit by bit.</p>
+    </article>
+<hr class="solid">
+	
+    <article>
+        <h1 id="introduction">Introduction</h1>    
+        <p>In industries where customer feedback holds significant influence —such as dining, hospitality, and retail— sentiment analysis has proven being a powerful 
+            tool for targeted improvements to stay competitive by increasing customer satisfaction.</p>
+        <p>Meet <a href="assets/images/sites/nlp_sentiment_analysis/persona.png" alt="Persona description" class="openModal">Lorena Castillo</a>, a fictitious Regional 
+            Manager of First Watch restaurants in Florida. As many other regional managers —maybe just like you— she saw the potential to increase customer value and 
+            revenue for her locations through professional sentiment analyses. Follow her journey to discover how her data analyst transformed raw customer feedback 
+            into business insights by classifying reviews as positive, negative, or neutral and aggregating the data at the store level. Learn how sentiment analysis 
+            can support evidence-based decisions that drive business performance and create customer value.</p>
+    </article>
+    
+    <article>
+        <h1 id="scenario">Scenario (fictitious)</h1>    
+        <p><a href="assets/images/sites/nlp_sentiment_analysis/persona.png" alt="Persona description" class="openModal">Lorena Castillo</a> took on the role of Regional Manager 
+            for First Watch Restaurants in Florida in <abbr title="The publicly available dataset ranges from 2015 through 2022 with a considerable drop of reviews after 2019. In order to conduct a strong analyses on the available data, the scenario takes place in the end of 2019.">October 2019</abbr>. 
+            After taking over operations, she realized that the restaurant performance metrics across various locations were poorly tracked and inconsistantly reported. Additionally, 
+            customer satisfaction analyses were sparse and outdated, making it difficult to gauge how well stores were performing.<br>
+            To develop a strong strategy for enhancing restaurant operations, improving customer experience and increasing profitability, Lorena needed a clear understanding 
+            of the current situation at each location. While reviewing customer feedback from various online sources, she quickly became overwhelmed by the sheer volume of 
+            unorganized data and conflicting opinions.<br>
+            Lorena decided to seek professional support for the analysis from a reliable service provider. Understanding the urgency of the project, she reached out to four 
+            consulting firms for proposals, looking for an analyses delivering clear insights on customer feedback and recommendations to address potential issues in a timely manner.<br>
+            Lorena reviewed several proposals, and selected the proposal with me as data analyst since it vontained a detailed, transparent, and problem-focused approach. 
+            This proposal exactly provided her with the analyses she needed to make informed decisions for the entire region.</p>
+        <h2>Scope of the analysis</h2>
+        <p>After working closely with Lorena and understanding her needs, we identified the following outcomes to enhance customer satisfaction and business success:</p>
+        <ul>
+         <li>Assess current customer satisfaction across all First Watch locations in Florida to gain a clear understanding of overall business health.</li>
+         <li>Conduct a comparative analysis across locations to identify top-performing and underperforming stores.</li>
+          <li>Analyze patterns across different stores to uncover opportunities for improving customer service and product offerings, ultimately enhancing the customer experience.</li>
+          <li>Evaluate operational efficiencies and inefficiencies across locations to define and implement standardized best practices.</li>
+           <li>Identify and prioritize improvement areas with the highest potential impact on customer satisfaction to generate value quickly.</li>
+        </ul>
+        
+        <!-- Modal definition -->
+        <div id="pdfModal" class="modal">
+         <div class="modal-content-full">
+                <span class="close">&times;</span>
+                <img id="modalImage" src="" alt="Persona description">
+            </div>
+        </div>
+
+        <script>
+            var modal = document.getElementById("pdfModal");
+            var modalImage = document.getElementById("modalImage");
+          var links = document.getElementsByClassName("openModal");
+           var span = document.getElementsByClassName("close")[0];
+
+           // Loop through all links with the class "openModal"
+           for (var i = 0; i < links.length; i++) {
+               links[i].onclick = function(event) {
+                  event.preventDefault(); // Prevent default link behavior
+                  modal.style.display = "block";
+                  modalImage.src = this.href; // Set image src to the link's href
+              }
+          }
+
+           // When the user clicks on <span> (x), close the modal
+          span.onclick = function() {
+              modal.style.display = "none";
+              modalImage.src = ""; // Clear image content
+          }
+
+         // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+             if (event.target == modal) {
+                 modal.style.display = "none";
+                 modalImage.src = ""; // Clear image content
+             }
+         }
+        </script>
+    </article>
+
+    <article>
+        <h1 id="data">Data | <span class="provided-by">provided by</span> <a href="https://www.yelp.com" target="_blank" class="inline-image"><img src="assets/images/sites/nlp_sentiment_analysis/yelp_logo.png" alt="yelp.com" /></a></h1>
+        <p>In this project, I am using customer review data provided by <a href="https://www.yelp.com" target="_blank" alt="yelp.com">Yelp</a>. 
+            Yelp offers two methods of data access: <a href="https://www.yelp.com/dataset" target="_blank" alt="Yelp Open Dataset">Yelp Open Dataset</a> and 
+		<a href="https://www.fusion.yelp.com" target="_blank" alt="Yelp Fusion API">Yelp Fusion</a>.</p>
+        <p>Yelp Fusion <abbr title="Application Programming Interface">API</abbr> provides real-time data but imposes several restrictions. Customer reviews are 
+            limited in both the number of requests that can be made per day and the number of characters in each review. Additionally, data retrieved through 
+            <abbr title="Application Programming Interface">API</abbr> can only be cached for 24 hours, and the process of retrieving data can be time-consuming. 
+            These limitations can complicate data analysis, especially when it is important to use the same dataset for maintaining reproducibility throughout the project.</p>
+        <p>For these reasons, I have chosen to use Yelp’s Open Dataset, which is publicly and freely accessible through 
+            <a href="https://www.yelp.com/dataset/download" target="_blank" alt="Yelp's Open Dataset Download">Yelp Open Data Download</a> site. Yelp generously provides the Open 
+	    Dataset for non-commercial personal, educational, and academic purposes and rightfully prohibits the uncontrolled redistribution of their data. To comply with Yelp's 
+	    Terms of Service, I will not save the Open Dataset or derivates of it in my repository. Instead, please download the Open Dataset directly from 
+	    <a href="https://www.yelp.com/dataset" target="_blank" alt="Yelp Open Dataset">Yelp's Open Dataset</a> website to run the script.</p>
+    </article> 
+
+    <article>
+        <h1 id="data_analysis">Data Analysis</h1>
+	    <img src="assets/images/sites/nlp_sentiment_analysis/workflow.png" alt="Workflow" style="width: 100%; height: auto;">
+        <p>Near a great forest, there lived a poor woodcutter and his wife and his two children; the boy's name was Hansel, and the girl's name was Gretel. He had little to 
+            bite and to break, and once, when great scarcity fell on the land, he could no longer procure even daily bread. Now when he thought over this by night in his bed, 
+            and tossed about in his anxiety, he groaned and said to his wife: "What is to become of us? How are we to feed our poor children, when we no longer have anything even for ourselves?"</p>
+        <button onclick="window.open('https://mybinder.org/v2/gh/tbgrun/tbgrun.github.io/main?labpath=assets%2Fanalyses%2Fnlp_sentiment_analysis%2Fnlp_sentiment_analysis.ipynb', '_blank');">Open Jupyter Notebook (Binder)</button>
+        <button onclick="window.location.href='assets/analyses/nlp_sentiment_analysis/nlp_sentiment_analysis.ipynb';">Download Jupyter Notebook</button>
+    </article>
+
+    <article>
+        <h1 id="results">Results</h1>    
+        <p>"I'll tell you what, husband," answered the woman, "early tomorrow morning we will take the children out into the forest to where it is the thickest; there we will light a fire for them, 
+		    and give each of them one more piece of bread, and then we will go to our work and leave them alone. They will not find the way home again, and we shall be rid of them."<br>
+            "No, wife," said the man, "I will not do that; how can I bear to leave my children alone in the forest?—the wild animals would soon come and tear them to pieces."<br>
+            "Oh, you fool!" said she, "then we must all four die of hunger; you may as well plane the planks for our coffins," and she left him no peace until he consented.<br> 
+		    "But I feel very sorry for the poor children, all the same," said the man.</p>
+    </article>    
+	
+</div>
+    
+</body>
+
+<footer class="footer">
+    <p>© 2024 by Tobias B. Grun</p>
+</footer>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="keywords" content="tbgrun, tobias b. grun, data science, data analytics, data engineering, statistics">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Simulation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="assets/images/icon.ico" alt="icon" type="image/x-icon"/>
+</head>
+
+<body>
+<div class="profile-container">
+   <aside class="profile-aside">
+       <img src="assets/images/sites/sunrise_simulation/sunrise_simulation.png" alt="Sunrise Simulation" class="profile-image" id="profile"> 
+   </aside>
+  <section>
+     <h1 id="overview">Sunrise Simulation</h1>
+     <p>This project is a custom sunrise simulation using a Raspberry Pi 4B and an RGB LED light strip. It mimics a natural sunrise by gradually increasing 
+       the brightness and adjusting the LED colors through precise control of each channel using the pigpio library and MOSFETs. Beginning with dark orange, the 
+       light transitions to full-spectrum daylight over 30 minutes. Once full brightness and daylight color are reached, the system maintains this illumination 
+       for one hour, offering a consistent and gentle wake-up experience.</p>
+  </section>
+</div>
+    
+<nav class="navbar">
+    <ul class="nav-links">
+            <li><a href="https://tbgrun.github.io#projects">Back to Portfolio</a></li>
+	    <li><a href="#profile">Overview</a></li>
+	    <li><a href="#introduction">Introduction</a></li>
+	    <li><a href="#hardware_setup">Hardware Setup</a></li>
+      <li><a href="#python_code">Python Code</a></li>
+	    <li><a href="#raspberry_setup">Raspberry Setup</a></li>
+      <li><a href="#disclaimer">Disclaimer</a>
+    </ul>
+</nav>  
+
+<div class="container">
+    <article>
+	<h1 id="introduction">Introduction</h1>    
+        <p>The idea for a sunrise simulation came to life during the winter of 2023 after we moved to Germany. If you've experienced winter here, you know — nights are long, 
+		dark, and utterly committed to making weekend mornings an exercise in sheer willpower. More often than not, it’s that obnoxious alarm that shocks you awake, 
+		leaving you to wonder why you bothered setting it in the first place.</p>
+	<p>I stumbled across alarm clocks designed to wake you up with a blend of light and sound. The concept of gradually increasing brightness sounded dreamy — until 
+		I tried it and discovered these lights barely rivaled a dim nightlight. That was when the idea of building my own sunrise 
+		simulator came to me. Not only would it brighten our mornings, but it could also serve as a little project to survive the hostile German winter.</p>
+	<p>After some research, I came to the conclusion that Raspberry Pi would be the best option to kickstart my project. I had never worked with a single-board computer 
+		before, neither had I ever configured a hardwired LED setup. But hey, stepping out of the scripting comfort zone is half the fun I thought!</p>
+    </article>
+
+    <article>
+        <h1 id="hardware_setup">Hardware Setup</h1>    
+        <p>The hardware configuration seemed straightforward at first glance: the Raspberry Pi has a set of pins that allow it to send and receive signals. Naturally, one might 
+		think all it takes is to connect the red, green, and blue channels to the Raspberry Pi’s pins and let the Python code control the LED.
+	<p>However, as with most things in life, there’s more to it. First, it’s important to understand how the LED strip works. Unlike light bulbs that can be dimmed by 
+		regulating current, LEDs are quickly turned on and off. The longer the LED is off, the dimmer it appears. This effect is called Pulse Width Modulation (PWM). 
+		Therefore, it’s essential to find the pins on the Raspberry Pi that natively support PWM for this setup.</p>
+	<p>Once you have that figured out, the next question is how much power the Raspberry Pi's pins can supply, and whether that’s enough for a power-hungry LED strip. 
+		The answer according to most sources is "no". This is where the setup enters a completely different realm beyond simple scripting and wiring. We now need 
+		MOSFETs, a breadboard, and other components. Fortunately, there are experts who have already figured out what parts are needed, how to calculate their properties, 
+		and even compiled shopping lists with links to purchase them.</p>
+	<p>For everything hardware-related, I recommend checking out an online source like <a href="https://dordnung.de/raspberrypi-ledstrip/en" target="_blank">David Ordnung’s</a> 
+	        blog, which covers how to set up an LED strip with a Raspberry Pi.</p>
+    </article>
+
+    <article>	
+    <h1 id="python_code">Python Code</h1>
+    <div class="code-container">
+	  <pre><code>
+# setup environment
+import pigpio
+import time
+
+# setup GPIO pins
+red_pin = 13
+green_pin = 19
+blue_pin = 26
+
+# maximum RGB brightness
+max_brightness = 255
+
+# set colors
+dark_orange = (255, 69, 0)  # RGB values for dark orange
+daylight = (255, 255, 255)  # RGB values for daylight
+
+# simulation times in seconds
+total_transition_time = 1800  # 30 minutes
+full_brightness_time = 3600  # 1 hour
+
+def setup():
+    pi = pigpio.pi()
+    if not pi.connected:
+        raise RuntimeError("Failed to connect to pigpio daemon")
+    
+        # initialize PWM cycles to 0% brightness
+        pi.set_PWM_dutycycle(red_pin, 0)
+        pi.set_PWM_dutycycle(green_pin, 0)
+        pi.set_PWM_dutycycle(blue_pin, 0)
+
+        return pi
+
+def interpolate_color(start_color, end_color, progress):
+    """Calculate intermediate color based on progress (0 to 1)."""
+    return (
+        int(start_color[0] + (end_color[0] - start_color[0]) * progress),
+        int(start_color[1] + (end_color[1] - start_color[1]) * progress),
+        int(start_color[2] + (end_color[2] - start_color[2]) * progress)
+    )
+
+def simulate_light_transition(pi):
+    # gradually transition from dark orange to daylight over 30 minutes
+    start_time = time.time()
+    while time.time() - start_time < total_transition_time:
+        elapsed_time = time.time() - start_time
+        progress = elapsed_time / total_transition_time
+
+        # calculate RGB values based on progress
+        red, green, blue = interpolate_color(dark_orange, daylight, progress)
+
+        # gradually Transition from 0 to 100% brightness
+        pi.set_PWM_dutycycle(red_pin, max(0, min(max_brightness, red)))
+        pi.set_PWM_dutycycle(green_pin, max(0, min(max_brightness, green)))
+        pi.set_PWM_dutycycle(blue_pin, max(0, min(max_brightness, blue)))
+
+        time.sleep(1)
+
+def main():
+    pi = setup()
+
+    try:
+        # simulate light transition
+        simulate_light_transition(pi)
+
+        # keep light on at full brightness for 1 hour
+        pi.set_PWM_dutycycle(red_pin, daylight[0])
+        pi.set_PWM_dutycycle(green_pin, daylight[1])
+        pi.set_PWM_dutycycle(blue_pin, daylight[2])
+        time.sleep(full_brightness_time)
+
+    finally:
+        # cleanup
+        pi.set_PWM_dutycycle(red_pin, 0)
+        pi.set_PWM_dutycycle(green_pin, 0)
+        pi.set_PWM_dutycycle(blue_pin, 0)
+        pi.stop()
+
+if __name__ == "__main__":
+    main()
+  
+    </code></pre>
+    </div>		  
+    </article>	
+
+    <article>
+    <h1 id="raspberry_setup">Raspberry Setup</h1>    
+    <p>With the working script, you now only need to tell your Raspberry Pi to run the script on your dream schedule, e.g., every Saturday and Sunday at 10 AM. 
+      I use cron to achieve this:</p>
+    <div class="code-container">
+	<pre><code>
+crontab -e
+0 10 * * 6,7 /usr/bin/python3 /scripts/sunrise_simulation.py
+        </code></pre>
+    </div>
+    </article>
+    
+    <article>
+    <h1 id="disclaimer">Disclaimer</h1>
+    <p>If you choose to follow my instructions, use my code for the Raspberry Pi sunrise simulation project, or follow linked content and please do so at your own risk. 
+       I am not responsible for any damages to equipment, injury, or any other negative outcomes that may result from the use of code and information provided, or 
+       external content. It is your responsibility to ensure proper safety precautions, adhere to electrical and hardware guidelines, and understand the risks involved 
+       when working with electronics and coding projects.</p>
+    </article>    
+	
+</div>
+    
+</body>
+
+<footer class="footer">
+    <p>© 2024 by Tobias B. Grun</p>
+</footer>
+</html>

@@ -1,0 +1,302 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    display: block;
+    font-size: 1.5em;
+    color: #333;
+    margin-block-start: 1.5em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: left;
+    font-weight: bold;
+}
+
+h2 {
+    display: block;
+    font-size: 1em;
+    color: #333;
+    margin-block-start: 0.83em;
+    margin-block-end: -.75em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h3 {
+    display: block;
+    font-size: 0.85em;
+    color: #333;
+    margin-block-start: 0.75em;
+    margin-block-end: -0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+/* Profile container */
+.profile-container {
+    margin: auto;
+    display: flex;
+    padding: 1%;
+    background-color: #c9e7ff;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; /* prevent content from overflowing */
+    align-items: center; /* vertically center content */
+}
+
+/* Profile Aside style */
+.profile-aside {
+    padding: .5%;
+    width: 20%;
+    display: flex; /* center the image */
+    align-items: center; /* vertically center image */
+    justify-content: center; /* horizontally center image */
+}
+
+/* Profile image, responsive */
+.profile-aside img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Main content style */
+section {
+    padding: 0% 5%;
+    flex: 1;
+    flex-shrink: 0; /* prevent shrinking */
+    word-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Navigation bar container */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none; /* remove default list styles */
+    margin: 0;
+    padding: 0;
+    display: flex; /*  horizontal alignment */
+    justify-content: space-around; /* space links evenly */
+    flex-wrap: wrap; /* wrapping of links on smaller screens */
+}
+
+/* Navigation link items */
+.nav-links li {
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* Navigation link styles */
+.nav-links a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    flex-grow: 1;
+}
+
+/* Change background color on hover */
+.nav-links a:hover {
+    color: #c9e7ff;	
+    background-color: #575757;
+}
+
+/* link style */
+a {
+    color: #3b5998;
+    text-decoration: none;
+}
+
+/* hover effect for links */
+a:hover {
+    text-decoration: underline;
+    color: #2d4373;
+}
+
+.code-container {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #f0f8ff;
+    padding: 15px;
+    padding-left: 35px;
+    border-radius: 10px;
+    overflow-x: auto;
+    font-family: Consolas, "Courier New", monospace;
+    color: #333;
+}
+
+.publication {
+    margin-top: 1%;
+    margin-bottom: 3%;
+    list-style-position: outside;   /* creates hanging bullets */
+    list-style-type: none;   /* removes bullet points */
+    padding-left: 0;         /* removes default padding */
+}
+
+.publication li {
+    margin-bottom: 20px;            /* extra space between bullet points */
+}
+
+/* Container with flexbox */
+.container {
+    padding: 5%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Solid border */
+hr.solid {
+  border-top: 1px solid #333;
+}
+
+/* Modal definition */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; /* was 100 */
+  height: 100%; /* was 100 */
+  overflow: hidden; 
+  background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+}
+
+/* Modal Content for Certifications */
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 1%;
+  max-width: 60%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* Image inside the modal */
+.modal-content img {
+  width: 90%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Modal Content for Personas */
+.modal-content-full {
+    position: relative;
+    margin: auto;
+    padding: 1%;
+    max-width: 95%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    overflow: auto;
+  }
+
+  /* Image inside the modal */
+.modal-content-full img {
+    width: 90%;
+    height: auto; /* Maintain aspect ratio */
+  }
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #c9e7ff;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+}
+
+button:hover {
+    color: #c9e7ff;	
+    background-color: #575757;
+    text-decoration: none;
+}
+
+/* Inline image */
+.inline-image img {
+    height: 1em;
+    width: auto;
+    vertical-align: middle;
+}
+
+/* Span style for header image */
+.provided-by {
+  font-size: 0.5em;
+  font-weight: normal;
+  vertical-align: bottom;
+}
+
+/* Footer style */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        padding: 2%;
+        max-width: 100%;
+    }
+
+    .profile-aside, section {
+        width: 100%;
+        margin-right: 0;
+        padding: 5%; 
+        box-sizing: border-box;
+    }
+
+    section {
+        text-align: justify;
+    }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .nav-links {
+        flex-direction: column;
+    }
+    .nav-links a {
+        padding: 10px;
+    }
+}
