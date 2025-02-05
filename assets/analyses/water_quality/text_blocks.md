@@ -13,4 +13,4 @@ Data visualization techniques are used to show current and past water quality in
 
 Scenario (fictitious)
 Florida's Gulf Coast is one of the most beautiful and idyllic regions known to mankind. The shore is defined by white sandy beaches, warm waters, palmtrees, and mangrove forests. Particularly the central and south region spanning from Marco Island to Clearwater is known for the wonderful, wide, and endless fine-sanded beaches. It is no surprise that one can find clusters of most esthetic beachfront mansions in these areas. However, Florida's Gulf Coast has its own set of challenges like notorious hurricanes that can render insuring the valuable property a hopeless endeavour. Residents and tourists alike face another brutal, yet often invisible challenge - the intrinsic content of the water. Pollutants like heavy metals, red-tide events, and harmful algae blooms (HABs) terrorize Florida's halcyon Gulf Coast.
-In early 2023, an alliance of wealthy property owner from 
+In early 2023, an alliance of wealthy property owner from Sanibel Island in the south to Clearwater Beach in the north formed to 
