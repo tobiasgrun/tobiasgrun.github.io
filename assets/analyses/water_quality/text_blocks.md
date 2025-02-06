@@ -28,7 +28,8 @@ After a careful requirements analysis with stakeholders, we together identified 
 * The report is interactive, by selecting a value (drillthrough), the viewer will be forwarded to a detailed report that shows a table of the recorded values and a line plot that shows patterns and trends.
 
 
-
+#### Data
+Water quality data are widely online accessible and most of them are free to use. However, it can be difficult to comply with all policies provided by the data owner, and policies can change over time. In this project, it is crucial to share the original data and their derivates. In order to avoid violations of current or future data policies, I decided to use synthetically generated data. The python script for the generation of the data is available below and setup in a way that the generated data are reproducible meaning that each time you run the script, the same data will be generated.
 
 
 Wastewater phosphate mine
