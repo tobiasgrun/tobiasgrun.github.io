@@ -12,24 +12,28 @@ Data visualization techniques are used to show current and past water quality in
 
 
 #### Introduction
-Florida's Gulf Coast is one of the most beautiful and idyllic regions known to mankind. The shore is defined by white sandy beaches, warm waters, palmtrees, and mangrove forests. Particularly the central and south region spanning from Marco Island to Clearwater is known for the wonderful, wide, and endless fine-sanded beaches. It is no surprise that one can find clusters of most esthetic beachfront mansions in these areas. However, Florida's Gulf Coast has its own set of challenges like notorious hurricanes that can render insuring the valuable property a hopeless endeavour. Residents and tourists alike face another brutal, yet often invisible challenge - the intrinsic content of the water. Pollutants like heavy metals, red-tide events, and harmful algae blooms (HABs) terrorize Florida's halcyon Gulf Coast.
-
-In this project, the waterquality of Florida's scenic Gulf Coast is monitored. Recorded data are presented in the form of dashboards and reports publisthed online that allow the public to obtain a concise overview of the current water quality situation and find detailed reports of trends and patterns.
+Florida's Gulf Coast is one of the most breathtaking and idyllic regions in the world. Its shoreline is defined by white sandy beaches, warm waters, palm trees, and vast mangrove forests. The central and southern sections, stretching from Marco Island to Clearwater Beach, are particularly renowned for their wide, endless beaches with fine, powdery sand. It's no surprise that some of the most stunning beachfront mansions can be found here.<br>
+This paradise comes with its own challenges. Devastating hurricanes make insuring these valuable properties a daunting task. Residents and tourists yet face another, often invisible threat—the very waters they admire so much. Pollutants such as heavy metals, red tide events, and harmful algal blooms (HABs) pose a persistent and growing risk to Florida’s tranquil Gulf Coast.<br>
+This fictitious project monitors the water quality of Florida's scenic Gulf Coast. The collected data is presented through interactive dashboards and detailed reports published online, providing the public with a clear overview of current water conditions as well as in-depth insights into trends and patterns.
 
 
 #### Scenario (fictitious)
-After the phosphate mine leakage in 2023, residents of Florida's central and southern Gulf Coast where terrified about the health hazards that could lure in the waters so close to their homes. They found that it is time to put a monitoring system in place that records critical water parameters that are associated with health hazards such as algae blooming events and water pollution of dangerous levels. The alliance of residents was able to secure enough funds and all required permits to get water quality monitoring station installed at seven locations on the Sunshine State's coast spanning from Clearwater Beach in the north to Sanibel Island in the south. The Oceanic Engineering Firm that developed and installed the monitoring stations assigned me with the development of dashboard and reports that visualize recorded measurements and provide intuitive and detailled insights into the data so that residents and the general public can make best decisions for their recreational activities and environmental conservation organisations can use the data for data-driven actions.
+Following the phosphate mine leak in 2023, residents of Florida’s central and southern Gulf Coast were deeply concerned about the potential health hazards and  its negative impact on their property value posed by contaminated waters near their homes. Recognizing the urgency, they decided to implement a monitoring system that tracks critical water parameters related to health risks, such as algal blooms and dangerous levels of pollution. The community coalition secured the necessary funding and permits to install water quality monitoring stations at seven locations along the Sunshine State’s coast, from Clearwater Beach in the north to Sanibel Island in the south.
+
+The Oceanic Engineering Firm, which developed and installed the monitoring stations, tasked me with creating dashboards and reports to visualize the collected data. The goal was to provide intuitive and detailed insights, helping residents, the general public, and environmental conservation organizations make informed decisions regarding recreational activities and data-driven conservation actions to reduce health hazards and plumbing property values.
 
 ##### Scope
-After a careful requirements analysis with stakeholders, we together identified the following requirements for the dashboards and reports:
-* Dashboard and reports will be developed in Microsoft Power BI, a standard tool for advanced visualizations.
-* One dashboard showing the locations of the seven locations on a map with the current water quality as a gauge diagramm.
-* The dashboard is interactive, by selecting a location (drilldown), the viewer will be forwarded to a report and sees all current water parameters of the location in the form of a diagram that shows the current value of the parameter on a scale that is divided in good, critical, and high values.
-* The report is interactive, by selecting a value (drillthrough), the viewer will be forwarded to a detailed report that shows a table of the recorded values and a line plot that shows patterns and trends.
+Through a comprehensive requirements analysis with stakeholders, we identified the following key requirements for the dashboards and reports:
+
+* Dashboards and reports will be developed using Microsoft Power BI, a leading tool for advanced visualizations.
+* One dashboard will display the locations of the seven monitoring stations on a map, with current water quality shown using a gauge diagram.
+* The dashboard is interactive: by selecting a location (drilldown), users will be directed to a detailed report displaying the current water parameters for that location. Each parameter is presented with a visual scale indicating whether it is within good, critical, or high values.
+* The report is interactive: by selecting a parameter value (drillthrough), users will be taken to a detailed report showing recorded values in a table, along with a line plot that reveals patterns and trends over time.
 
 
 #### Data
-Water quality data are widely online accessible and most of them are free to use. However, it can be difficult to comply with all policies provided by the data owner, and policies can change over time. In this project, it is crucial to share the original data and their derivates. In order to avoid violations of current or future data policies, I decided to use synthetically generated data. The python script for the generation of the data is available below and setup in a way that the generated data are reproducible meaning that each time you run the script, the same data will be generated.
+Water quality data are readily accessible online, with many sources offering free use. However, complying with the policies set by data owners can be challenging, as these policies can change over time. For this project, it was essential to share both the original data and its derivatives. To ensure compliance with current and future data policies and to avoid potential violations, I opted to use synthetically generated data.<br>
+The Python script used for data generation is provided below and is set up to ensure reproducibility. This means that every time the script is run, the same synthetic data will be produced.
 
 
 Wastewater phosphate mine
