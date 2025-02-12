@@ -1,0 +1,14 @@
+sensor_id;parameter;unit;
+;Temperature;°C;Resistance Temperature Detector
+;pH;pH;Glass Electrode pH Sensor
+;Salinity;ppm;Electrical Conductivity Sensors
+;Dissolved Oxygen;mg/L;Electrochemical DO Sensor
+;Turbidity;NTU;Nephelometric Turbidity Sensor
+;Nitrate;mg/L;Ion-Selective Electrode
+;Phosphate;mg/L;Ion-Selective Electrode
+;Silicate;mg/L;Colorimetric Sensor
+;Clorophyll-a;µg/L;Fluorometer
+;Karena brevis;cells/L;Immunoassay
+;Biochemical Oxygen Demand;mg/L;Respirometric Sensor
+;Escherichia coli;CFU/100mL;Optical Fluorescence and Immunoassay
+;Enterococcus;CFU/100mL;Optical Fluorescence and Immunoassay
