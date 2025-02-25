@@ -1,5 +1,5 @@
 # Our Mission
-To revolutionize ocean engineering with cutting-edge technology, empower exploration and communication beneath the surface, and set new standards in underwater innovation worldwide.
+Pioneering ocean engineering with cutting-edge technology, empower exploration and monitoring beneath the surface, and set new standards in underwater innovation worldwide.
 
 # 1. Company Overview
 Name: ScyllaWorks
@@ -7,7 +7,7 @@ Structure: Limited Liability Company (LLC)
 Industry: Oceanic Engineering and Underwater Technology
 Founded: 1996
 Headquarters: Tampa, FL
-Mission Statement: To revolutionize ocean engineering with cutting-edge technology, empower exploration and communication beneath the surface, and set new standards in underwater innovation worldwide.
+Mission Statement: Pioneering ocean engineering with cutting-edge technology, empower exploration and monitoring beneath the surface, and set new standards in underwater innovation worldwide.
 
 # 2. Core Services and Expertise
 Custom-Manufactured Underwater Sensors: High-precision sensors for environmental monitoring, research, and industrial applications.
