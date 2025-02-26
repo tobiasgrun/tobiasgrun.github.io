@@ -5,7 +5,7 @@ This document provides information about the promts and software that has been u
 ## ScyllaWorks Website
 Platform: ChatGPT-4 (OpenAI)
 Prompt
-´´´´
+```
 Create a simple HTML page for a company called ScyllaWorks, specializing in ocean engineering solutions. The page should include:
 1. A header with the company name and tagline ("Innovative Ocean Engineering Solutions").
 2. A hero section with a full-width image (replace with "hero-image.jpg") above the title "Pioneering the Future of Ocean Technology" and a description: "At ScyllaWorks, we design and develop cutting-edge marine engineering solutions, from high-precision underwater sensors to autonomous exploration vehicles."
@@ -19,7 +19,7 @@ Create a simple HTML page for a company called ScyllaWorks, specializing in ocea
 7. A section titled "Innovative Projects Driving the Future" showcasing examples like "Deep-Sea Autonomous Sensor Network" and "Advanced Naval Sonar Systems".
 8. A contact section with the title "Contact Us" and an email link (info@scyllaworks.com).
 Use a dark color scheme with shades of blue and white text, and make the layout responsive using flexbox for the services section. Include proper section styling for clean and organized visuals.
-´´´
+```
 
 ## Images
 Platform: InDesign, Text to Image (Adobe Inc.)
