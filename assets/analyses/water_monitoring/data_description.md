@@ -63,19 +63,7 @@ The .csv table 'FactDada.csv' contains synthetically generated water parameter m
 * **Date:** Date of measurement.
 * **Location ID:** Links the measurement to a unique location. Key for 'DimLocation.csv' tabel with column 'Location ID'.
 * **Parameter ID:** Links the measurement to a unique water parameter. Key for 'DimParameter.csv' tabel with column 'Parameter ID'.
-* **Value:** Value of the water parameter measurement..
-
-
-
-* **Nitrate [mg/L]:** Key nutrient indicator for trophy level, recorded as mg per Liter.
-* **Phosphate [mg/L]:** Key nutrient indicator for trophy level, recorded as mg per Liter.
-* **Silicia [mg/L]:** Nutrient indicator for water quality, measured in mg per Liter.
-* **Karenia brevis [cells/L]:** Algae species responsible for red tide events, measured in cells per Liter.
-* **Water Temperature [°C]:** Surface Water Temperature, measured in °Celcius.
-* **Salinity [ppm]:** Salinity of water, measured in parts per million.
-* **Dissolved Oxygen [mg/L]:** Key indicator for water quality. Records the amaount of dissolved oxygen in the water, measured in mg per Liter.
-* **pH [pH]:** Nutrient indicator for water acidity, recorded as power of the Hydrogen ion (pH).
-* **Turbidity [NTU]:** Measure of water quality, recorded as Nephelometric Turbidity unit (NTU).
+* **Value:** Value of the water parameter measurement.
 #### Relation
 * **Foreign Keys:** 'Location ID', 'Location ID'
 * **Relates to:**
