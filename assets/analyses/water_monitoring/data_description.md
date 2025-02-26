@@ -21,7 +21,6 @@
 
 | Column Name      | Data Type    | Constraints          | Reference                  | Cardinality | Direction | Description                            |
 |------------------|--------------|----------------------|----------------------------|-------------|-----------|----------------------------------------|
-| Description ID   | INT          | PK                   |                            |             |           | Unique identifier for each description |
 | Parameter ID     | INT          | FK, UNIQUE, NOT NULL | DimParameter(Parameter ID) | 1:1         | ←→        | Identifier for parameter               |
 | Description      | VARCHAR(255) | UNIQUE, NOT NULL     |                            |             |           | Description of parameter               |
 
