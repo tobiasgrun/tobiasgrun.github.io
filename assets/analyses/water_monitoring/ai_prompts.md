@@ -42,5 +42,11 @@ marine robotics for deep sea exploration
 ### marine_custom_equipment.png
 Prompt
 ```
-marine underwater sensors
+autonomous operated vehicle
+```
+
+### marine_climate_system.png
+Prompt
+```
+offshore climate station buoy
 ```
