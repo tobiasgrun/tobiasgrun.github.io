@@ -68,3 +68,18 @@ The .csv table 'FactDada.csv' contains synthetically generated water parameter m
 * **Foreign Keys:** 'Location ID', 'Location ID'
 * **Relates to:**
   * 'DimParameter.csv', Foreign Key: 'Parameter ID', Cardinality: 'one-to-one', Direction: 'both'
+
+
+
+| Table Name | Column Name  | Data Type      | Constraints          | Description                  |
+|------------|-------------|---------------|----------------------|------------------------------|
+| Customers  | CustomerID  | INT           | PK, AUTO_INCREMENT  | Unique identifier for customer |
+| Customers  | FirstName   | VARCHAR(50)   | NOT NULL            | Customer's first name         |
+| Customers  | LastName    | VARCHAR(50)   | NOT NULL            | Customer's last name          |
+| Customers  | Email       | VARCHAR(100)  | UNIQUE, NOT NULL    | Customer's email              |
+| Customers  | Phone       | VARCHAR(15)   | NULLABLE            | Customer's phone number       |
+| Customers  | CreatedAt   | TIMESTAMP     | DEFAULT NOW()       | Timestamp of creation         |
+| Orders     | OrderID     | INT           | PK, AUTO_INCREMENT  | Unique identifier for order   |
+| Orders     | CustomerID  | INT           | FK (Customers)      | Associated customer           |
+| Orders     | OrderDate   | DATE          | NOT NULL            | Date of the order             |
+| Orders     | TotalAmount | DECIMAL(10,2) | NOT NULL            | Total order amount            |
