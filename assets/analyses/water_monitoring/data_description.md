@@ -32,7 +32,7 @@ The table contains 12 data rows (parameters) and xxx columns.
 * **Phosphate [mg/L]:** Key nutrient indicator for trophy level, recorded as mg per Liter.
 * **Silicia [mg/L]:** Nutrient indicator for water quality, measured in mg per Liter.
 * **Karenia brevis [cells/L]:** Algae species responsible for red tide events, measured in cells per Liter.
-* **Biologic Oxygen  [mg/L]:** Amount of oxygen consumed by microorganism in a defined space over a defined periode of time.
+* **Biochemical Oxygen Demand [mg/L]:** BOD. Amount of oxygen consumed by microorganism in a defined space over a defined periode of time.
 * **Escherichia coli [CFU]:** Bacteria present in fecies of mamals.
 * **Enterococcus [CFU]:** Bacteria present in fecies of mamals.
 #### Columns
