@@ -1,5 +1,10 @@
 # Data Description
+The data structure follows a snowflake scheme.<br>
+ → Primary Key referencing Foreign Key<br>
+ ← Foreign Key referencing Primary Key
+
 ## DimLocation
+The 'DimLocation' table is a dimensional table of the fictitious water monitoring stations. It contains seven rows (locations) and four column. GPS data have been retrieved from GoogleMaps on February 4th, 2025.
 
 | Column Name   | Data Type     | Constraints          | Reference             | Cardinality | Direction | Description                             |
 |---------------|---------------|----------------------|-----------------------|-------------|-----------|-----------------------------------------|
@@ -10,6 +15,7 @@
 
 
 ## DimParameter
+The 'DimParameter' table is a dimensional table of the water parameters that are measured at each location via sensors. The table contains 12 rows (parameters) and two columns.
 
 | Column Name    | Data Type     | Constraints          | Reference              | Cardinality | Direction | Description                          |
 |----------------|---------------|----------------------|------------------------|-------------|-----------|--------------------------------------|
@@ -18,6 +24,7 @@
 
  
 ## DimParameterDescription
+The 'DimParameterDescription' table is a dimensional table of the water parameters that are measured at each location via sensors. The table contains 12 rows (parameters) and two columns.
 
 | Column Name      | Data Type    | Constraints          | Reference                  | Cardinality | Direction | Description                            |
 |------------------|--------------|----------------------|----------------------------|-------------|-----------|----------------------------------------|
@@ -34,5 +41,3 @@ The 'FactData' table contains synthetically generated water parameter measuremen
 | Location ID  | VARCHAR(50)    | FK, UNIQUE, NOT NULL | DimLocation(Location ID)    | M:1         | →         | Identifier for location             |
 | Parameter ID | DECIMAL(8,6)   | FK, UNIQUE, NOT NULL | DimParameter(Parameter ID)  | M:1         | →         | Identifier for parametern           |
 | Value        | DECIMAL(20,10) | UNIQUE, NOT NULL     |                             |             |           | Recorded value for measurement      |
-
-
