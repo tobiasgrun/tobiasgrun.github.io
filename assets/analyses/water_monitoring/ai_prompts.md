@@ -22,7 +22,9 @@ Prompt
 Platform: InDesign, Text to Image (Adobe Inc.)
 ### marine_engineering_vessel.png
 Prompt
-        marine engineering vesselin the caribbean
+'''
+marine engineering vesselin the caribbean
+'''
 ### marine_sensor.png
 Prompt
     marine underwater sensors
