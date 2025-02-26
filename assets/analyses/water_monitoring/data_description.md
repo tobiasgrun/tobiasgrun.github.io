@@ -24,17 +24,17 @@ The table contains seven data rows (locations) and four columns.
 The .csv table 'DimParameter.csv' contains water parameters measured in this ficticious project.<br>
 The table contains 12 data rows (parameters) and xxx columns.
 #### Rows (parameters)
-* **Water Temperature [°C]:** Surface Water Temperature, measured in °Celcius.
-* **Salinity [ppm]:** Salinity of water, measured in parts per million.
-* **pH [pH]:** Nutrient indicator for water acidity, recorded as power of the Hydrogen ion (pH)
-* **Dissolved Oxygen [mg/L]:** Key indicator for water quality. Records the amaount of dissolved oxygen in the water, measured in mg per Liter.
-* **Nitrate [mg/L]:** Key nutrient indicator for trophy level, recorded as mg per Liter.
-* **Phosphate [mg/L]:** Key nutrient indicator for trophy level, recorded as mg per Liter.
-* **Silicia [mg/L]:** Nutrient indicator for water quality, measured in mg per Liter.
-* **Karenia brevis [cells/L]:** Algae species responsible for red tide events, measured in cells per Liter.
-* **Biochemical Oxygen Demand [mg/L]:** BOD. Amount of oxygen consumed by microorganism in a defined space over a defined periode of time.
-* **Escherichia coli [CFU]:** Bacteria present in fecies of mamals.
-* **Enterococcus [CFU]:** Bacteria present in fecies of mamals.
+* **Water Temperature:** Surface Water Temperature, measured in °Celcius.
+* **Salinity:** Salinity of water, measured in parts per million.
+* **pH:** Nutrient indicator for water acidity, recorded as power of the Hydrogen ion (pH)
+* **Dissolved Oxygen:** Key indicator for water quality. Records the amaount of dissolved oxygen in the water, measured in mg per Liter.
+* **Nitrate:** Key nutrient indicator for trophy level, recorded as mg per Liter.
+* **Phosphate:** Key nutrient indicator for trophy level, recorded as mg per Liter.
+* **Silicia:** Nutrient indicator for water quality, measured in mg per Liter.
+* **Karenia brevis:** Algae species responsible for red tide events, measured in cells per Liter.
+* **Biochemical Oxygen Demand:** BOD. Amount of oxygen consumed by microorganism in a defined space over a defined periode of time, measured in mg per Liter.
+* **Escherichia coli:** Bacteria present in fecies of mamals, measured as colony forming units.
+* **Enterococcus:** Bacteria present in fecies of mamals, measured as colony forming units.
 #### Columns
 * **Parameter ID:** Primary key. Unique identifier for each Parameter.
 * **Parameter Name:** Name of the closest landmark in natural language.
