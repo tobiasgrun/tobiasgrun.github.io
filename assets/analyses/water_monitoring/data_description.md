@@ -41,4 +41,4 @@ The 'FactData' table contains synthetically generated water parameter measuremen
 | Date         | Date           | NOT NULL             |                             |             |           | Unique identifier for each location |
 | Location ID  | VARCHAR(50)    | FK, UNIQUE, NOT NULL | DimLocation(Location ID)    | M:1         | →         | Identifier for location             |
 | Parameter ID | DECIMAL(8,6)   | FK, UNIQUE, NOT NULL | DimParameter(Parameter ID)  | M:1         | →         | Identifier for parametern           |
-| Value        | DECIMAL(20,10) | UNIQUE, NOT NULL     |                             |             |           | Synthetic value for measurement     |
+| Value        | DECIMAL(20,10) | UNIQUE, NOT NULL     |                             |             |           | Synthetic values for measurement    |
