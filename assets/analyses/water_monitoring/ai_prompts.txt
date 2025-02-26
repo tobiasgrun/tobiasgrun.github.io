@@ -1,8 +1,10 @@
+----------
 AI Prompts
 ----------
 This document provides information about the promts and software that has been used to generate the ScyllaWorks website and images.
 
 
+-------------------
 ScyllaWorks Website
 -------------------
 Platform: ChatGPT-4 (OpenAI)
@@ -23,6 +25,7 @@ Create a simple HTML page for a company called ScyllaWorks, specializing in ocea
 Use a dark color scheme with shades of blue and white text, and make the layout responsive using flexbox for the services section. Include proper section styling for clean and organized visuals.
 
 
+------
 Images
 ------
 Platform: InDesign, Text to Image (Adobe Inc.)
