@@ -29,10 +29,18 @@ marine engineering vesselin the caribbean
 
 ### marine_sensor.png
 Prompt
-    marine underwater sensors
+```
+marine underwater sensors
+```
+
 ### marine_robotics.png
 Prompt
-    marine robotics for deep sea exploration
+```
+marine robotics for deep sea exploration
+```
+
 ### marine_custom_equipment.png
 Prompt
-    marine underwater sensors
+```
+marine underwater sensors
+```
