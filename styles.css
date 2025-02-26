@@ -50,6 +50,19 @@ h3 {
     align-items: center; /* vertically center content */
 }
 
+.iframe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Profile Aside style */
 .profile-aside {
     padding: .5%;
