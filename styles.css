@@ -57,12 +57,16 @@ h3 {
   align-items: center;
   margin: 0 auto;
   width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
 }
 
 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 600px;
-  height: auto;
+  height: 100%;
 }
 
 /* Profile Aside style */
