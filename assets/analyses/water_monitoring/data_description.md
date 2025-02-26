@@ -3,6 +3,8 @@ The data structure follows a snowflake scheme.<br>
  → Primary Key referencing Foreign Key<br>
  ← Foreign Key referencing Primary Key
 
+
+
 ## DimLocation
 The 'DimLocation' table is a dimensional table of the fictitious water monitoring stations. It contains seven rows (locations) and four column. GPS data have been retrieved from GoogleMaps on February 4th, 2025.
 
@@ -22,7 +24,7 @@ The 'DimParameter' table is a dimensional table of the water parameters that are
 | Parameter ID   | INT           | PK                   | FactData(Parameter ID) | 1:M         | ←         | Unique identifier for each parameter |
 | Parameter Name | VARCHAR(50)   | UNIQUE, NOT NULL     |                        |             |           | Name of parameter                    |
 
- 
+
 ## DimParameterDescription
 The 'DimParameterDescription' table is a dimensional table of the water parameters that are measured at each location via sensors. The table contains 12 rows (parameters) and two columns.
 
