@@ -50,6 +50,7 @@ h3 {
     align-items: center; /* vertically center content */
 }
 
+/* Embedded content container */
 .iframe-container {
   display: flex;
   justify-content: center;
@@ -59,8 +60,8 @@ h3 {
 }
 
 iframe {
-  max-width: 100%;
-  height: auto;
+  max-width: auto;
+  height: 100%;
 }
 
 /* Profile Aside style */
