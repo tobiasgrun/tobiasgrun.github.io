@@ -17,12 +17,58 @@
             padding: 20px;
             text-align: center;
         }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: auto;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+        }
+        .service {
+            background: #112d4e;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 300px;
+            text-align: center;
+        }
+        .service img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .contact {
+            text-align: center;
+            padding: 30px;
+            background: #102a43;
+        }
+        .contact a {
+            color: #1f7aff;
+            text-decoration: none;
+        }
+        /* New Sections Styling */
         .content-section {
             padding: 40px 20px;
         }
         .content-section h2 {
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         .expertise-section h4 {
             margin-bottom: 5px;
@@ -37,10 +83,49 @@
         <h1>ScyllaWorks</h1>
         <p>Innovative Ocean Engineering Solutions</p>
     </header>
-
-    <section class="content-section">
-        <h2>Welcome to ScyllaWorks – Pioneering the Future of Ocean Technology</h2>
-        <p>Since 1996, ScyllaWorks has been at the forefront of oceanic engineering and underwater technology, delivering cutting-edge solutions for marine exploration, environmental monitoring, and industrial applications. With a relentless commitment to innovation, we develop state-of-the-art underwater sensors, autonomous vehicles, and smart monitoring systems that push the boundaries of what’s possible beneath the surface.</p>
+    <section class="hero">
+        <img src="hero-image.jpg" alt="Ocean Engineering">
+        <h1>Pioneering the Future of Ocean Technology</h1>
+        <p>At ScyllaWorks, we design and develop cutting-edge marine engineering solutions, from high-precision underwater sensors to autonomous exploration vehicles.</p>
+    </section>
+    <section class="services">
+        <div class="service">
+            <img src="sensor.jpg" alt="Custom Underwater Sensors">
+            <h2>Custom Underwater Sensors</h2>
+            <p>High-precision sensors for environmental monitoring, research, and industrial applications.</p>
+        </div>
+        <div class="service">
+            <img src="weather_station.jpg" alt="Offshore Weather Stations">
+            <h2>Offshore Weather Stations</h2>
+            <p>Robust weather monitoring systems designed to withstand extreme marine conditions.</p>
+        </div>
+        <div class="service">
+            <img src="iot_sensors.jpg" alt="IoT & Smart Sensor Integration">
+            <h2>IoT & Smart Sensor Integration</h2>
+            <p>Developing innovative connected solutions for real-time oceanic data collection.</p>
+        </div>
+        <div class="service">
+            <img src="auv.jpg" alt="Autonomous Underwater Vehicles">
+            <h2>Autonomous Underwater Vehicles</h2>
+            <p>Engineering AUVs equipped with smart sensors for deep-sea exploration and environmental surveys.</p>
+        </div>
+    </section>
+    
+    <section class="content-section expertise-section">
+        <h2>Our Expertise</h2>
+        <p>ScyllaWorks specializes in designing and manufacturing advanced underwater technology for demanding marine environments.</p>
+        
+        <h4>Custom-Manufactured Underwater Sensors</h4>
+        <p>Our high-precision sensors support environmental monitoring, research, and industrial applications.</p>
+        
+        <h4>Offshore Weather Stations</h4>
+        <p>We provide robust weather monitoring solutions designed to endure extreme oceanic conditions.</p>
+        
+        <h4>IoT and Smart Sensor Integration</h4>
+        <p>Our smart sensor systems enable real-time data collection and connectivity for continuous oceanic monitoring.</p>
+        
+        <h4>Autonomous Underwater Vehicles (AUVs)</h4>
+        <p>We engineer AUVs equipped with intelligent sensors for deep-sea exploration, environmental surveys, and industrial use.</p>
     </section>
 
     <section class="content-section expertise-section">
@@ -93,11 +178,10 @@
             <li><b>Underwater Data Transmission Breakthrough</b> – A revolutionary acoustic-optical hybrid communication system that enables high-speed data transfer beneath the ocean’s surface.</li>
         </ul>
     </section>
-
-    <section class="content-section">
+    <section class="contact">
         <h2>Contact Us</h2>
         <p>Get in touch to learn more about our cutting-edge marine technologies.</p>
-        <p>Email: <a href="mailto:info@scyllaworks.com" style="color: #1f7aff; text-decoration: none;">info@scyllaworks.com</a></p>
+        <p>Email: <a href="mailto:info@scyllaworks.com">info@scyllaworks.com</a></p>
     </section>
 </body>
 </html>
