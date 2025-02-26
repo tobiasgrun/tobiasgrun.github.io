@@ -3,13 +3,13 @@
 The .csv table 'DimLocation.csv' contains GPS locations (WGS84) of ficticious sample sites retrieved from Google Maps on February 4th, 2025.<br>
 The table contains seven data rows (locations) and four columns.
 #### Rows (locations)
-* 1
-* 2
-* 3
-* 4
-* 5
-* 6
-* 7
+* Boca Grande
+* Clearwater Beach
+* Indian Shores
+* Sanibel Island
+* Siesta Key
+* St. Pete Beach
+* Venice Beach
 #### Columns
 * **Location ID:** Primary key. Unique identifier for each location.
 * **Location Name:** Name of the closest landmark in natural language.
