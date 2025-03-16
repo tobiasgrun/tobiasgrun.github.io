@@ -1,0 +1,13 @@
+Sensor ID,Measured Parameter,Unit,Accuracy,Sensor Type
+1,Temperature,°C,± 0.1 °C,Resistance Temperature Detector
+2,pH,pH,± 0.05,Glass Electrode pH Sensor
+3,Salinity,mg/L,± 2%,Electrochemical DO Sensor
+4,Dissolved Oxygen,NTU,± 2%,Nephelometric Turbidity Sensor
+5,Nitrate,mg/L,± 2%,Ion-Selective Electrode
+6,Phosphate,mg/L,± 1%,Ion-Selective Electrode
+7,Silicate,mg/L,± 2%,Colorimetric Sensor
+8,Clorophyll-a,µg/L,± 1%,Fluorometer
+9,Karenia brevis,cells/L,± 5%,Immunoassay Biosensor
+10,Biochemical Oxygen Demand,mg/L,± 5%,Respirometric BOD Sensor
+11,Escherichia coli,CFU/100mL,± 5%,Optical Immunoassay Hybrid Biosensor
+12,Enterococcus,CFU/100mL,± 5%,Optical Immunoassay Hybrid Biosensor
